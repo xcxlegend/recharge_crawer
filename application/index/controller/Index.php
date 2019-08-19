@@ -22,8 +22,8 @@ class Index extends Frontend
     public function demo()
     {
         $gateway = 'http://www.18381789999.com:8107';
-        $agentid = '11608';
-        $merchantKey = '36fd22e8ffce69d5750dc8b8288c6a3a';
+        $agentid = '11610';
+        $merchantKey = 'cf0328584acf1ee2fe4f2e20547bd48a';
         $pay = new CSTPay(compact('agentid','merchantKey', 'gateway'));
         $data = $pay->queryAccount();
         dump($data);

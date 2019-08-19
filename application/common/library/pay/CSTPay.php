@@ -14,6 +14,7 @@ use think\Log;
 class CSTPay extends IPay
 {
     const API_QUERYACCOUNT = '/MainServiceBusiness/GetAgentInfo';
+    const API_PHONE_ORDER = '/MainServiceBusiness/SendPhoneChargeInfo';
     const XML_KEY_PREFIX = '{http://schemas.datacontract.org/2004/07/KR.NetDistribute.Models}';
 
 
@@ -49,7 +50,54 @@ class CSTPay extends IPay
 
     public function order()
     {
-        // TODO: Implement order() method.
+        /**
+         * chargenumbertype	号码类型	3	非空	手机号码为1
+        固话号码为2
+        agentid	代理商id	200	非空	代理商在代理平台的商家号(平台安全管理，基础资料修改里）
+        returntype	返回类型	1	非空	1表示get返回 2表示返回XML信息。目前只支持xml方式返回。
+        orderid	代理商订单号	30	非空	该订单号由代理商系统生成。orderid唯一确定一条订单。
+        chargenumber	充值号码	20	非空	充值号码
+        amountmoney	充值面值		非空	充值面值
+        num	数量	4	可空	充值数量（目前支持1，支持倍数待通知）
+        ispname	运营商	20	可空	固话时需要输入
+        移动、联通、电信
+        传汉字，用utf-8编码，进行MD5加密时不用编码，手机号可空。
+        source	订单来源	10	非空	代理商请填写2，此处务必填写2，否则可能造成提交订单号重复。
+        verifystring	验证摘要串	100	非空	详见接后描述
+
+         */
+        $params = [
+            'chargenumbertype' => 1,
+            'agentid'          => $this->params['agentid'],
+            'returntype'       => 2,
+            'orderid'          => 'orderid',
+            'chargenumber'     => 'chargenumber',
+            'amountmoney'      => 'amountmoney',
+            'num'              => 1,
+            'ispname'          => 'ispname',
+            'source'           => 2,
+        ];
+
+        $sign_params = [
+            'chargenumbertype',
+            'agentid',
+            'returntype',
+            'orderid',
+            'chargenumber',
+            'amountmoney',
+            'ispname',
+            'source',
+        ];
+        $md5str = '';
+        foreach ($sign_params as $sign_param) {
+            $md5str .= "{$sign_param}={$params[$sign_param]}&";
+        }
+
+        $md5str .= 'merchantKey='.$this->params['merchantKey'];
+        $params['verifystring'] = md5($md5str);
+
+        $response = $this->request();
+
     }
 
     public function queryOrder()
