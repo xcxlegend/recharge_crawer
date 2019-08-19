@@ -3,6 +3,7 @@
 namespace app\index\controller;
 
 use app\common\controller\Frontend;
+use app\common\library\pay\CSTPay;
 
 class Index extends Frontend
 {
@@ -18,10 +19,14 @@ class Index extends Frontend
         return $this->view->fetch();
     }
 
-    public function news()
+    public function demo()
     {
-        $newslist = [];
-        return jsonp(['newslist' => $newslist, 'new' => count($newslist), 'url' => 'https://www.fastadmin.net?ref=news']);
+        $gateway = 'http://www.18381789999.com:8107';
+        $agentid = '11608';
+        $merchantKey = '36fd22e8ffce69d5750dc8b8288c6a3a';
+        $pay = new CSTPay(compact('agentid','merchantKey', 'gateway'));
+        $data = $pay->queryAccount();
+        dump($data);
     }
 
 }

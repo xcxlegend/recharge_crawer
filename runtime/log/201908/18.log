@@ -1,0 +1,3286 @@
+---------------------------------------------------------------
+[ 2019-08-18T22:23:45+08:00 ] 127.0.0.1 GET crawer.in:8003/
+[运行时间：0.622010s] [吞吐率：1.61req/s] [内存消耗：4,941.75kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004746s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.020048s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.034373s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005646s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.007531s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.006694s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000423s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:23:45+08:00 ] 127.0.0.1 GET crawer.in:8003/index/user/index.html
+[运行时间：0.186363s] [吞吐率：5.37req/s] [内存消耗：5,111.72kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000130s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001568s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001653s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->index[ D:\Legend\php\crawer\application\index\controller\User.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/index\view\user\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011085s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005566s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004726s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000411s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:23:45+08:00 ] 127.0.0.1 GET crawer.in:8003/
+[运行时间：0.065609s] [吞吐率：15.24req/s] [内存消耗：4,941.76kb] [文件加载：139]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001568s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004344s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011242s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.006074s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003944s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000398s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:23:46+08:00 ] 127.0.0.1 GET crawer.in:8003/index/user/index.html
+[运行时间：0.055241s] [吞吐率：18.10req/s] [内存消耗：5,111.72kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001183s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001336s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/user.php
+[ info ] [ RUN ] app\index\controller\User->index[ D:\Legend\php\crawer\application\index\controller\User.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/index\view\user\index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000758s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005568s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004004s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000408s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:23:47+08:00 ] 127.0.0.1 GET crawer.in:8003/index/ajax/lang?callback=define&controllername=user&v=1566138226
+[运行时间：0.090694s] [吞吐率：11.03req/s] [内存消耗：5,004.73kb] [文件加载：140]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001232s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/index/user/index.html',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user',
+  'v' => '1566138226',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001528s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ D:\Legend\php\crawer\application\index\controller\Ajax.php ]
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/user.php
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010945s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005724s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004933s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000541s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:23:55+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.777698s] [吞吐率：1.29req/s] [内存消耗：6,004.66kb] [文件加载：181]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001156s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001367s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011013s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.004402s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.005578s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000585s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+[ error ] [8]未定义数组索引: resultno[D:\Legend\php\crawer\application\common\library\pay\CSTPay.php:82]
+---------------------------------------------------------------
+[ 2019-08-18T22:23:56+08:00 ] 127.0.0.1 GET crawer.in:8003/favicon.ico
+[运行时间：0.026795s] [吞吐率：37.32req/s] [内存消耗：2,737.44kb] [文件加载：116]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001229s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/index/index/demo',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:24:21+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.107522s] [吞吐率：9.30req/s] [内存消耗：5,978.26kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001172s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001379s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010455s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.004241s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004146s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000353s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:25:17+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.114415s] [吞吐率：8.74req/s] [内存消耗：5,982.31kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001347s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005382s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010812s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.004115s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000331s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003951s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000348s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:28:44+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.128905s] [吞吐率：7.76req/s] [内存消耗：5,982.83kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000052s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001475s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001547s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000856s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.004088s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004089s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000371s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:28:46+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.157630s] [吞吐率：6.34req/s] [内存消耗：5,982.83kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000052s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001476s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001550s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010894s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005508s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004007s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000317s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:28:47+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.088844s] [吞吐率：11.26req/s] [内存消耗：5,982.83kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001190s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001347s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000796s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005552s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004231s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000407s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:29:17+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.106564s] [吞吐率：9.38req/s] [内存消耗：5,982.83kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001172s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001327s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010953s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005691s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004049s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000369s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:29:18+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.113400s] [吞吐率：8.82req/s] [内存消耗：5,982.83kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000070s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001640s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001854s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010933s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.004153s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000456s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004492s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000328s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:33:03+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.195626s] [吞吐率：5.11req/s] [内存消耗：5,978.84kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001452s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001547s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011030s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005752s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000309s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003871s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000379s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:33:42+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.099734s] [吞吐率：10.03req/s] [内存消耗：5,979.01kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000053s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001420s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001568s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000940s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005937s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004148s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000346s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:33:57+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.112422s] [吞吐率：8.90req/s] [内存消耗：5,979.17kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001178s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001347s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010657s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005635s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003990s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000356s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:35:09+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.110962s] [吞吐率：9.01req/s] [内存消耗：5,978.84kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001185s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001334s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011006s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005875s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003997s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000345s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:35:58+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.407653s] [吞吐率：2.45req/s] [内存消耗：5,989.90kb] [文件加载：176]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001437s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001511s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000838s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005341s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000277s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004529s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000421s ]
+[ error ] [0]类型错误: Argument 1 passed to app\common\library\pay\CSTPay::app\common\library\pay\{closure}() must be an instance of app\common\library\pay\Sabre\Xml\Reader, instance of Sabre\Xml\Reader given[D:\Legend\php\crawer\application\common\library\pay\CSTPay.php:100]
+---------------------------------------------------------------
+[ 2019-08-18T22:35:58+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：1.629050s] [吞吐率：0.61req/s] [内存消耗：6,115.26kb] [文件加载：175]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001439s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001531s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010881s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005467s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004347s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000400s ]
+[ error ] [0]类型错误: Argument 1 passed to app\common\library\pay\CSTPay::app\common\library\pay\{closure}() must be an instance of app\common\library\pay\Sabre\Xml\Reader, instance of Sabre\Xml\Reader given[D:\Legend\php\crawer\application\common\library\pay\CSTPay.php:100]
+---------------------------------------------------------------
+[ 2019-08-18T22:36:45+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.110591s] [吞吐率：9.04req/s] [内存消耗：5,989.70kb] [文件加载：176]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000053s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001302s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001372s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011146s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005597s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004070s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000375s ]
+[ error ] [0]致命错误: Call to undefined function app\common\library\pay\Sabre\Xml\Deserializer\repeatingElements()[D:\Legend\php\crawer\application\common\library\pay\CSTPay.php:101]
+---------------------------------------------------------------
+[ 2019-08-18T22:37:10+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.102895s] [吞吐率：9.72req/s] [内存消耗：5,979.16kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001157s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001602s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000901s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005435s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003940s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000348s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:37:45+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.108432s] [吞吐率：9.22req/s] [内存消耗：5,978.84kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001190s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001675s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010900s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.003811s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004145s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000378s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:39:38+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.109084s] [吞吐率：9.17req/s] [内存消耗：5,979.02kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001547s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001612s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000880s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005385s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003953s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000352s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:39:39+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.119176s] [吞吐率：8.39req/s] [内存消耗：5,979.02kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001418s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001517s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010861s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005535s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003986s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000383s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:41:55+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.103780s] [吞吐率：9.64req/s] [内存消耗：6,001.53kb] [文件加载：181]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001415s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001487s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000872s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.004010s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000300s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004064s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000332s ]
+[ error ] [2]count(): Parameter must be an array or an object that implements Countable[D:\Legend\php\crawer\application\common\library\pay\CSTPay.php:106]
+---------------------------------------------------------------
+[ 2019-08-18T22:42:07+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.099123s] [吞吐率：10.09req/s] [内存消耗：5,983.10kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001609s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001589s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000860s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005408s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003865s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000327s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:42:08+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.088864s] [吞吐率：11.25req/s] [内存消耗：5,983.10kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001158s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001317s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000722s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005349s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003902s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000399s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:42:22+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.099719s] [吞吐率：10.03req/s] [内存消耗：5,983.10kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001138s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001321s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000812s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005519s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004323s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000370s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:42:46+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.116076s] [吞吐率：8.62req/s] [内存消耗：5,983.10kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001158s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001307s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011007s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005509s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004032s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000343s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:43:14+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.136039s] [吞吐率：7.35req/s] [内存消耗：6,001.48kb] [文件加载：181]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001198s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001380s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000799s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005434s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004131s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000368s ]
+[ error ] [8]未定义变量: result[D:\Legend\php\crawer\application\common\library\pay\CSTPay.php:110]
+---------------------------------------------------------------
+[ 2019-08-18T22:43:25+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.110630s] [吞吐率：9.04req/s] [内存消耗：5,983.15kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001187s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001334s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000755s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005469s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004036s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000312s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T22:46:08+08:00 ] 127.0.0.1 GET crawer.in:8003/admin
+[运行时间：0.254044s] [吞吐率：3.94req/s] [内存消耗：3,975.20kb] [文件加载：134]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001437s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001659s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000877s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:46:11+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/index/login?url=%2Fadmin
+[运行时间：0.081066s] [吞吐率：12.34req/s] [内存消耗：4,359.01kb] [文件加载：137]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001444s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001509s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ D:\Legend\php\crawer\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000242s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:46:11+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/index/login?url=%2Fadmin
+[运行时间：0.041371s] [吞吐率：24.17req/s] [内存消耗：4,359.13kb] [文件加载：137]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001169s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001380s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ D:\Legend\php\crawer\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000184s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:46:11+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/index/login?url=%2Fadmin
+[运行时间：0.038638s] [吞吐率：25.88req/s] [内存消耗：4,359.13kb] [文件加载：137]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001215s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001398s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ D:\Legend\php\crawer\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000189s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:46:11+08:00 ] 127.0.0.1 GET crawer.in:8003/index.php?s=/captcha
+[运行时间：0.074865s] [吞吐率：13.36req/s] [内存消耗：2,742.78kb] [文件加载：113]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001241s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/index/login?url=%2Fadmin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Legend\php\crawer\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:46:11+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/ajax/lang?callback=define&controllername=index&v=1566139571
+[运行时间：0.045748s] [吞吐率：21.86req/s] [内存消耗：4,296.38kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001196s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/index/login?url=%2Fadmin',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1566139571',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001400s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\Legend\php\crawer\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000172s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:46:18+08:00 ] 127.0.0.1 POST crawer.in:8003/admin/index/login?url=%2Fadmin
+[运行时间：0.173731s] [吞吐率：5.76req/s] [内存消耗：5,254.90kb] [文件加载：142]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001167s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/index/login?url=%2Fadmin',
+  'origin' => 'http://crawer.in:8003',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '86',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin',
+  '__token__' => 'a698c7253623dab46f5ce7a3468a9213',
+  'username' => 'admin',
+  'password' => '111111',
+  'captcha' => 'vi48',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001373s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ D:\Legend\php\crawer\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.038454s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011225s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_log` [ RunTime:0.005974s ]
+[ sql ] [ SQL ] INSERT INTO `admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"url\":\"\\/admin\",\"__token__\":\"a698c7253623dab46f5ce7a3468a9213\",\"username\":\"admin\",\"captcha\":\"vi48\"}' , '/admin/index/login?url=%2Fadmin' , 0 , 'Unknown' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' , '127.0.0.1' , 1566139578) [ RunTime:0.002271s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:46:18+08:00 ] 127.0.0.1 GET crawer.in:8003/index.php?s=/captcha&r=0.14568052892918848
+[运行时间：0.036391s] [吞吐率：27.48req/s] [内存消耗：2,743.22kb] [文件加载：113]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000061s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001218s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/index/login?url=%2Fadmin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r' => '0.14568052892918848',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Legend\php\crawer\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:46:20+08:00 ] 127.0.0.1 GET crawer.in:8003/index.php?s=/captcha&r=0.5306946369869936
+[运行时间：0.044322s] [吞吐率：22.56req/s] [内存消耗：2,743.22kb] [文件加载：113]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001168s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/index/login?url=%2Fadmin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r' => '0.5306946369869936',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Legend\php\crawer\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:46:24+08:00 ] 127.0.0.1 POST crawer.in:8003/admin/index/login?url=%2Fadmin
+[运行时间：0.051219s] [吞吐率：19.52req/s] [内存消耗：5,255.20kb] [文件加载：142]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001226s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/index/login?url=%2Fadmin',
+  'origin' => 'http://crawer.in:8003',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '98',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin',
+  '__token__' => '05f359973d115aa5e9b3fc2e7223c5bd',
+  'username' => 'admin',
+  'password' => '111111',
+  'captcha' => '3TUF',
+  'keeplogin' => '1',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001457s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ D:\Legend\php\crawer\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.015089s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000824s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_log` [ RunTime:0.005810s ]
+[ sql ] [ SQL ] INSERT INTO `admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"url\":\"\\/admin\",\"__token__\":\"05f359973d115aa5e9b3fc2e7223c5bd\",\"username\":\"admin\",\"captcha\":\"3TUF\",\"keeplogin\":\"1\"}' , '/admin/index/login?url=%2Fadmin' , 0 , 'Unknown' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' , '127.0.0.1' , 1566139584) [ RunTime:0.001833s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:46:24+08:00 ] 127.0.0.1 GET crawer.in:8003/index.php?s=/captcha&r=0.39703259207357067
+[运行时间：0.131858s] [吞吐率：7.58req/s] [内存消耗：2,743.22kb] [文件加载：113]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001203s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/index/login?url=%2Fadmin',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'r' => '0.39703259207357067',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\Legend\php\crawer\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:46:31+08:00 ] 127.0.0.1 POST crawer.in:8003/admin/index/login?url=%2Fadmin
+[运行时间：0.207867s] [吞吐率：4.81req/s] [内存消耗：5,332.59kb] [文件加载：145]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000061s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001346s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1565182025%7C9fa85ad942e9e2d09d9e0db05307d2a4; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/index/login?url=%2Fadmin',
+  'origin' => 'http://crawer.in:8003',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '98',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin',
+  '__token__' => 'ca73c8711a14475947f555b06fc61f45',
+  'username' => 'admin',
+  'password' => '111111',
+  'captcha' => 'pebc',
+  'keeplogin' => '1',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001417s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ D:\Legend\php\crawer\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.007742s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010488s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.007885s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] UPDATE `admin`  SET `logintime`=1566139591,`token`='90ead70b-4bb6-44cc-b727-7fad3adc57fb',`updatetime`=1566139591  WHERE  `id` = 1 [ RunTime:0.001978s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin_log` [ RunTime:0.003933s ]
+[ sql ] [ SQL ] INSERT INTO `admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/admin\",\"__token__\":\"ca73c8711a14475947f555b06fc61f45\",\"username\":\"admin\",\"captcha\":\"pebc\",\"keeplogin\":\"1\"}' , '/admin/index/login?url=%2Fadmin' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' , '127.0.0.1' , 1566139591) [ RunTime:0.002051s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:46:31+08:00 ] 127.0.0.1 GET crawer.in:8003/admin
+[运行时间：0.290438s] [吞吐率：3.44req/s] [内存消耗：5,678.84kb] [文件加载：155]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000056s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001175s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/index/login?url=%2Fadmin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001361s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\Legend\php\crawer\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000221s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010892s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.008127s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.002549s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.006301s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT `name`,`pid` FROM `auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 0  AND `name` LIKE '%/index' [ RunTime:0.000488s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:46:32+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/dashboard?addtabs=1
+[运行时间：0.113084s] [吞吐率：8.84req/s] [内存消耗：5,488.57kb] [文件加载：145]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001216s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001328s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ D:\Legend\php\crawer\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000180s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010509s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.005340s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000470s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.003637s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000374s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:46:32+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/ajax/lang?callback=define&controllername=index&v=1566139591
+[运行时间：0.035716s] [吞吐率：28.00req/s] [内存消耗：4,297.13kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001782s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1566139591',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001859s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\Legend\php\crawer\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000175s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:46:32+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/ajax/lang?callback=define&controllername=dashboard&v=1566139591
+[运行时间：0.037303s] [吞吐率：26.81req/s] [内存消耗：4,295.80kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000057s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001285s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/dashboard?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1566139591',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001388s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\Legend\php\crawer\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000180s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:49:05+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/user/user?addtabs=1
+[运行时间：0.204715s] [吞吐率：4.88req/s] [内存消耗：5,416.97kb] [文件加载：144]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000055s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001475s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.user',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001550s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ RUN ] app\admin\controller\user\User->index[ D:\Legend\php\crawer\application\admin\controller\user\User.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\user\user\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000238s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011014s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.006563s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.003926s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `auth_rule` WHERE  `name` = 'user/user' LIMIT 1 [ RunTime:0.000357s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:49:05+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/ajax/lang?callback=define&controllername=user.user&v=1566139745
+[运行时间：0.041402s] [吞吐率：24.15req/s] [内存消耗：4,293.91kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001474s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user.user',
+  'v' => '1566139745',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001705s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\Legend\php\crawer\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000251s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:49:06+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/user/user/index?sort=user.id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1566139745466
+[运行时间：0.093062s] [吞吐率：10.75req/s] [内存消耗：5,481.05kb] [文件加载：146]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000053s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001187s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'user.id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1566139745466',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001378s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ RUN ] app\admin\controller\user\User->index[ D:\Legend\php\crawer\application\admin\controller\user\User.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000182s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000724s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.005156s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.003916s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.005497s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_group` [ RunTime:0.006312s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` `user` LEFT JOIN `user_group` `group` ON `user`.`group_id`=`group`.`id` ORDER BY `user`.`id` DESC LIMIT 1 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT `user`.`id`,`user`.`group_id`,`user`.`username`,`user`.`nickname`,`user`.`password`,`user`.`salt`,`user`.`email`,`user`.`mobile`,`user`.`avatar`,`user`.`level`,`user`.`gender`,`user`.`birthday`,`user`.`bio`,`user`.`money`,`user`.`score`,`user`.`successions`,`user`.`maxsuccessions`,`user`.`prevtime`,`user`.`logintime`,`user`.`loginip`,`user`.`loginfailure`,`user`.`joinip`,`user`.`jointime`,`user`.`createtime`,`user`.`updatetime`,`user`.`token`,`user`.`status`,`user`.`verification`,group.id AS group__id,group.name AS group__name,group.rules AS group__rules,group.createtime AS group__createtime,group.updatetime AS group__updatetime,group.status AS group__status,group.code AS group__code FROM `user` `user` LEFT JOIN `user_group` `group` ON `user`.`group_id`=`group`.`id` ORDER BY `user`.`id` DESC LIMIT 0,10 [ RunTime:0.000327s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:49:19+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/user/user/edit/ids/1?dialog=1
+[运行时间：0.178407s] [吞吐率：5.61req/s] [内存消耗：5,468.10kb] [文件加载：145]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001214s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.user',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '1',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001388s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ RUN ] app\admin\controller\user\User->edit[ D:\Legend\php\crawer\application\admin\controller\user\User.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\user\user\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'groupList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000185s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000804s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.005162s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.005537s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004025s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_group` [ RunTime:0.005312s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `user_group` [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000458s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:49:19+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/ajax/lang?callback=define&controllername=user.user&v=1566139758
+[运行时间：0.034331s] [吞吐率：29.13req/s] [内存消耗：4,293.93kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000052s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001188s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user/edit/ids/1?dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user.user',
+  'v' => '1566139758',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001394s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\Legend\php\crawer\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000189s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:49:40+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/user/user/edit/ids/1?dialog=1
+[运行时间：0.091165s] [吞吐率：10.97req/s] [内存消耗：5,468.10kb] [文件加载：145]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001165s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.user',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '1',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001644s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ RUN ] app\admin\controller\user\User->edit[ D:\Legend\php\crawer\application\admin\controller\user\User.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\user\user\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'groupList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000176s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010830s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.005310s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.004301s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000563s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004149s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000377s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_group` [ RunTime:0.004361s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `user_group` [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000751s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:49:40+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/ajax/lang?callback=define&controllername=user.user&v=1566139780
+[运行时间：0.032951s] [吞吐率：30.35req/s] [内存消耗：4,293.93kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001198s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user/edit/ids/1?dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user.user',
+  'v' => '1566139780',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001480s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\Legend\php\crawer\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000174s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:50:15+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/user/user/edit/ids/1?dialog=1
+[运行时间：0.084344s] [吞吐率：11.86req/s] [内存消耗：5,468.10kb] [文件加载：145]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000055s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001484s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.user',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '1',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001362s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ RUN ] app\admin\controller\user\User->edit[ D:\Legend\php\crawer\application\admin\controller\user\User.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\user\user\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'groupList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000303s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000905s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.005650s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.003691s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004768s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_group` [ RunTime:0.003639s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `user_group` [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000242s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:50:15+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/ajax/lang?callback=define&controllername=user.user&v=1566139815
+[运行时间：0.033091s] [吞吐率：30.22req/s] [内存消耗：4,293.93kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001178s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user/edit/ids/1?dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user.user',
+  'v' => '1566139815',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001364s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\Legend\php\crawer\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000178s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:51:33+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/user/user/edit/ids/1?dialog=1
+[运行时间：0.091202s] [吞吐率：10.96req/s] [内存消耗：5,468.10kb] [文件加载：145]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001426s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.user',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '1',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001514s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ RUN ] app\admin\controller\user\User->edit[ D:\Legend\php\crawer\application\admin\controller\user\User.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\user\user\edit.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'groupList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000479s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010690s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.005611s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000335s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.003979s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.005273s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_group` [ RunTime:0.004819s ]
+[ sql ] [ SQL ] SELECT `id`,`name` FROM `user_group` [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000516s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:51:33+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/ajax/lang?callback=define&controllername=user.user&v=1566139893
+[运行时间：0.040537s] [吞吐率：24.67req/s] [内存消耗：4,293.93kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000053s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001558s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user/edit/ids/1?dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user.user',
+  'v' => '1566139893',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001547s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\Legend\php\crawer\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000240s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:52:21+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/user/group?addtabs=1
+[运行时间：0.200538s] [吞吐率：4.99req/s] [内存消耗：5,389.52kb] [文件加载：144]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001166s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.group',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/group?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001330s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/group.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\Legend\php\crawer\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\user\group\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000174s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000803s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.005207s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000393s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.004039s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000552s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `auth_rule` WHERE  `name` = 'user/group' LIMIT 1 [ RunTime:0.000365s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:52:21+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/ajax/lang?callback=define&controllername=user.group&v=1566139941
+[运行时间：0.035516s] [吞吐率：28.16req/s] [内存消耗：4,292.38kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001264s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/group?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user.group',
+  'v' => '1566139941',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001349s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\Legend\php\crawer\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/group.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000178s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:52:22+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/user/group/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1566139941689
+[运行时间：0.082861s] [吞吐率：12.07req/s] [内存消耗：5,376.92kb] [文件加载：144]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001176s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.group',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/group?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1566139941689',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001356s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/group.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\Legend\php\crawer\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000175s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010518s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.005399s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.003925s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000399s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_group` [ RunTime:0.003887s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user_group` ORDER BY `id` DESC LIMIT 1 [ RunTime:0.000365s ]
+[ sql ] [ SQL ] SELECT * FROM `user_group` ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.000317s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:54:27+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/user/rule?addtabs=1
+[运行时间：0.095534s] [吞吐率：10.47req/s] [内存消耗：5,476.62kb] [文件加载：146]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000055s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001492s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.rule',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/rule?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001560s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/rule.php
+[ info ] [ RUN ] app\admin\controller\user\Rule->index[ D:\Legend\php\crawer\application\admin\controller\user\Rule.php ]
+[ info ] [ VIEW ] D:\Legend\php\crawer\public/../application/admin\view\user\rule\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+  6 => 'ruledata',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000238s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000794s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.005164s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.004882s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_rule` [ RunTime:0.006145s ]
+[ sql ] [ SQL ] SELECT * FROM `user_rule` ORDER BY `weigh` DESC [ RunTime:0.000408s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `auth_rule` WHERE  `name` = 'user/rule' LIMIT 1 [ RunTime:0.000377s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:54:28+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/ajax/lang?callback=define&controllername=user.rule&v=1566140067
+[运行时间：0.045139s] [吞吐率：22.15req/s] [内存消耗：4,292.72kb] [文件加载：135]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001431s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/rule?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user.rule',
+  'v' => '1566140067',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001473s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\Legend\php\crawer\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/rule.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000233s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T22:54:28+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/user/rule/index?sort=weigh&order=desc&_=1566140067869
+[运行时间：0.092644s] [吞吐率：10.79req/s] [内存消耗：5,410.18kb] [文件加载：144]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001237s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.rule',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/rule?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  '_' => '1566140067869',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001730s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/rule.php
+[ info ] [ RUN ] app\admin\controller\user\Rule->index[ D:\Legend\php\crawer\application\admin\controller\user\Rule.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000174s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000759s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.005247s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000396s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.003845s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000431s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_rule` [ RunTime:0.003867s ]
+[ sql ] [ SQL ] SELECT * FROM `user_rule` ORDER BY `weigh` DESC [ RunTime:0.000386s ]
+---------------------------------------------------------------
+[ 2019-08-18T22:59:38+08:00 ] 127.0.0.1 GET crawer.in:8003/index/index/demo
+[运行时间：0.122780s] [吞吐率：8.14req/s] [内存消耗：5,983.21kb] [文件加载：177]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001458s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'demo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001587s ]
+[ info ] [ TOKEN ] INIT Mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->demo[ D:\Legend\php\crawer\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000839s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_token` [ RunTime:0.005472s ]
+[ sql ] [ SQL ] SELECT * FROM `user_token` WHERE  `token` = '6b3a329cf632f7acc9057ed838c9e959b646851e' LIMIT 1 [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004041s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000357s ]
+[ log ] {"url":"http:\/\/www.18381789999.com:8107\/MainServiceBusiness\/GetAgentInfo?agentid=11608&verifystring=557842d731f5190c9cb2bf82ba0def9b","response":"<AgentInfoReturn xmlns=\"http:\/\/schemas.datacontract.org\/2004\/07\/KR.NetDistribute.Models\" xmlns:i=\"http:\/\/www.w3.org\/2001\/XMLSchema-instance\"><agentbalance>0<\/agentbalance><agentid>11608<\/agentid><agentloginname>18208280694<\/agentloginname><resultmessage>查询成功<\/resultmessage><resultno>1000<\/resultno><verifystring>38ad3165d220930b6c57347e2c293050<\/verifystring><\/AgentInfoReturn>"}
+---------------------------------------------------------------
+[ 2019-08-18T23:13:17+08:00 ] 127.0.0.1 GET crawer.in:8003/admin/user/user/index?sort=user.id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1566139745467
+[运行时间：0.075912s] [吞吐率：13.17req/s] [内存消耗：5,481.05kb] [文件加载：146]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000055s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001667s ]
+[ info ] [ LANG ] D:\Legend\php\crawer\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1565095935; uid=1; token=a04dd10e-beed-4361-9626-8d005eb7db6d; PHPSESSID=6fibd6selcj49kfa7cbha8i2ut; thinkphp_show_page_trace=0|0; keeplogin=1%7C86400%7C1566225991%7C02583a9cda6ad5d8c8b28417b5827a33',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://crawer.in:8003/admin/user/user?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'crawer.in:8003',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'user.id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1566139745467',
+)
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001586s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\Legend\php\crawer\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ RUN ] app\admin\controller\user\User->index[ D:\Legend\php\crawer\application\admin\controller\user\User.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000240s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000903s ] mysql:host=127.0.0.1;dbname=crawer;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_group_access` [ RunTime:0.005601s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `auth_group_access` `aga` LEFT JOIN `auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `auth_rule` [ RunTime:0.003928s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004057s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user_group` [ RunTime:0.003765s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `user` `user` LEFT JOIN `user_group` `group` ON `user`.`group_id`=`group`.`id` ORDER BY `user`.`id` DESC LIMIT 1 [ RunTime:0.000336s ]
+[ sql ] [ SQL ] SELECT `user`.`id`,`user`.`group_id`,`user`.`username`,`user`.`nickname`,`user`.`password`,`user`.`salt`,`user`.`email`,`user`.`mobile`,`user`.`avatar`,`user`.`level`,`user`.`gender`,`user`.`birthday`,`user`.`bio`,`user`.`money`,`user`.`score`,`user`.`successions`,`user`.`maxsuccessions`,`user`.`prevtime`,`user`.`logintime`,`user`.`loginip`,`user`.`loginfailure`,`user`.`joinip`,`user`.`jointime`,`user`.`createtime`,`user`.`updatetime`,`user`.`token`,`user`.`status`,`user`.`verification`,group.id AS group__id,group.name AS group__name,group.rules AS group__rules,group.createtime AS group__createtime,group.updatetime AS group__updatetime,group.status AS group__status,group.code AS group__code FROM `user` `user` LEFT JOIN `user_group` `group` ON `user`.`group_id`=`group`.`id` ORDER BY `user`.`id` DESC LIMIT 0,10 [ RunTime:0.000392s ]
