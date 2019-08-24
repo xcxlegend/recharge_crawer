@@ -21,6 +21,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 url: $.fn.bootstrapTable.defaults.extend.index_url,
                 pk: 'id',
                 sortName: 'user.id',
+                searchFormVisible: true,
+                searchFormTemplate: 'searchtpl',
                 columns: [
                     [
                         {checkbox: true},
@@ -41,9 +43,29 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'jointime', title: __('Jointime'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange', sortable: true},
                         {field: 'joinip', title: __('Joinip'), formatter: Table.api.formatter.search},
                         {field: 'status', title: __('Status'), formatter: Table.api.formatter.status, searchList: {normal: __('Normal'), hidden: __('Hidden')}},
-                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
+                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, 
+                        buttons: [
+                            {
+                                name: 'click',
+                                title: __('重置密钥'),
+                                classname: 'btn btn-xs btn-info btn-click',
+                                icon: 'fa fa-refresh',
+                                click: function (data,row,index) {
+                                    Layer.confirm("确定重置密钥吗？", {type: 5, skin: 'layui-layer-dialog layui-layer-fast'}, function (value,index) {
+                                        Fast.api.ajax({
+                                            url: "user/user/resetkey",
+                                            data: { id: row.id}
+                                        }, function (data) {
+                                            Layer.closeAll();
+                                            
+                                        });
+                                    });
+                                }
+                            },
+                        ],
+                        formatter: Table.api.formatter.operate}
                     ]
-                ]
+                ],
             });
 
             // 为表格绑定事件
