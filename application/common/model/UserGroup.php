@@ -18,4 +18,7 @@ class UserGroup extends Model
     protected $append = [
     ];
 
+    const CODE_MERCHANT = "merchant";
+
+
 }

@@ -9,6 +9,7 @@ use think\exception\ValidateException;
 use think\Hook;
 use think\Lang;
 use think\Loader;
+use think\Log;
 use think\Request;
 use think\Response;
 use think\Route;
@@ -223,6 +224,10 @@ class Api
             $code = $code >= 1000 || $code < 200 ? 200 : $code;
         }
         $response = Response::create($result, $type, $code)->header($header);
+        Log::record(json_encode([
+            'request' => $this->request->request(),
+            'response' => $msg,
+        ], JSON_UNESCAPED_UNICODE), 'WARN');
         throw new HttpResponseException($response);
     }
 

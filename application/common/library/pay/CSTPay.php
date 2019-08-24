@@ -48,7 +48,7 @@ class CSTPay extends IPay
      */
 
 
-    public function order()
+    public function order(array &$order): bool
     {
         /**
          * chargenumbertype	号码类型	3	非空	手机号码为1
@@ -68,7 +68,7 @@ class CSTPay extends IPay
          */
         $params = [
             'chargenumbertype' => 1,
-            'agentid'          => $this->params['agentid'],
+            'agentid'          => $this->params->agentid,
             'returntype'       => 2,
             'orderid'          => 'orderid',
             'chargenumber'     => 'chargenumber',
@@ -96,7 +96,11 @@ class CSTPay extends IPay
         $md5str .= 'merchantKey='.$this->params['merchantKey'];
         $params['verifystring'] = md5($md5str);
 
-        $response = $this->request();
+        $response = $this->request(self::API_PHONE_ORDER, $params);
+        /*if ($response[]) {
+
+        }*/
+        return false;
 
     }
 
@@ -122,10 +126,10 @@ class CSTPay extends IPay
         // verifystring
 
         // agentid=%s&merchantKey=%s
-        $verifystring = md5("agentid={$this->params['agentid']}&merchantKey={$this->params['merchantKey']}");
+        $verifystring = md5("agentid={$this->params->agentid}&merchantKey={$this->params->merchantKey}");
 
         $data = $this->request(self::API_QUERYACCOUNT, [
-            'agentid' => $this->params['agentid'],
+            'agentid' => $this->params->agentid,
             'verifystring' => $verifystring,
         ]);
 
@@ -141,7 +145,7 @@ class CSTPay extends IPay
     // 因为是get请求. 所以直接请求
     protected function request($api, array $query): ?array {
         $client = New Client();
-        $url = $this->params['gateway'] . $api . '?' .  http_build_query($query);
+        $url = $this->params->gateway . $api . '?' .  http_build_query($query);
         $res = $client->get($url);
         if ($res->getStatusCode() == 200){
             $xml = $res->getBody()->getContents();

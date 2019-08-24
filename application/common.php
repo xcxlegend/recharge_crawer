@@ -362,3 +362,24 @@ if (!function_exists('hsv2rgb')) {
         ];
     }
 }
+
+if (!function_exists('sign')) {
+    function sign($key, array $params): string {
+        ksort($params);
+        $str = '';
+        foreach ($params as $k => $v){
+            if (!empty($v)) {
+                $str .= "{$k}={$v}&";
+            }
+        }
+
+        $str .= "key={$key}";
+        return md5($str);
+    }
+}
+
+if (!function_exists('create_orderid')) {
+    function create_orderid($prefix = ''): string{
+        return $prefix . date('YmdHis') . intval(explode(" ", microtime())[0] *1000);
+    }
+}
