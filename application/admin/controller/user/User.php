@@ -3,6 +3,8 @@
 namespace app\admin\controller\user;
 
 use app\common\controller\Backend;
+use fast\Random;
+use think\Config;
 
 /**
  * 会员管理
@@ -39,6 +41,7 @@ class User extends Backend
                 return $this->selectpage();
             }
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
+            //print_r($where);
             $total = $this->model
                 ->with('group')
                 ->where($where)
@@ -57,6 +60,8 @@ class User extends Backend
 
             return json($result);
         }
+        $groupList = \app\admin\model\UserGroup::column('id,name');
+        $this->view->assign('groupList',$groupList);
         return $this->view->fetch();
     }
 
@@ -65,17 +70,96 @@ class User extends Backend
      */
     public function edit($ids = NULL)
     {
-        $row = $this->model->get($ids);
+        $row = $this->model->get(['id' => $ids]);
         if (!$row)
             $this->error(__('No Results were found'));
+        if ($this->request->isPost())
+        {
+            $params = $this->request->post("row/a");
+            if ($params)
+            {
+                if ($params['password'])
+                {
+                    $params['salt'] = Random::alnum();
+                    $params['password'] = md5(md5($params['password']) . $params['salt']);
+                } else {
+                    unset($params['password'], $params['salt']);
+                }
+
+                $extend = json_decode($row['extend'],true);
+                $extend['pay_code'] =$params['extend']['pay_code'];
+                $params['extend'] = json_encode($extend);
+                $userValidate = \think\Loader::validate('User');
+                $userValidate->rule([
+                    'username' => 'require|max:50|unique:admin,username,' . $row->id,
+                    'email'    => 'require|email|unique:admin,email,' . $row->id
+                ]);
+                $result = $row->validate('User.edit')->save($params);
+                if ($result === false)
+                {
+                    $this->error($row->getError());
+                }
+
+                $this->success();
+            }
+            $this->error();
+        }
+        $row['extend'] = json_decode($row['extend'],true);
+        $this->view->assign("row", $row);
         $this->view->assign('groupList', build_select('row[group_id]', \app\admin\model\UserGroup::column('id,name'), $row['group_id'], ['class' => 'form-control selectpicker']));
-        return parent::edit($ids);
+        $this->view->assign('paycodeList', build_select('row[extend][pay_code]', Config::get('pt_pay_codes'), $row['extend']['pay_code'], ['class' => 'form-control selectpicker']));
+        return $this->view->fetch();
+
+    }
+
+    public function resetkey($id)
+    {
+        $row = $this->model->get(['id' => $id]);
+        if (!$row)
+            $this->error(__('No Results were found'));
+        if ($this->request->isPost())
+        {
+            $params = $this->request->post("row/a");
+            $extend = json_decode($row['extend'],true);
+            $extend['appkey'] =$extend['appkey'] = Random::alnum(32);
+            $params['extend'] = json_encode($extend);
+            
+            $result = $row->save($params);
+            if ($result === false)
+            {
+                $this->error($row->getError());
+            }
+
+            $this->success();
+        }
     }
 
     public function add()
     {
-        $this->view->assign('groupList', build_select('0', \app\admin\model\UserGroup::column('id,name'), 0, ['class' => 'form-control selectpicker']));
-        return parent::add();
+        if ($this->request->isPost())
+        {
+            $params = $this->request->post("row/a");
+            if ($params)
+            {
+                $params['salt'] = Random::alnum();
+                $params['password'] = md5(md5($params['password']) . $params['salt']);
+                $extend['appkey'] = Random::alnum(32);
+                $extend['pay_code'] =$params['extend']['pay_code'];
+                $params['extend'] = json_encode($extend);
+                $result = $this->model->validate('User.add')->save($params);
+                if ($result === false)
+                {
+                    $this->error($this->model->getError());
+                }
+                $this->success();
+            }
+            $this->error();
+        }
+        
+
+        $this->view->assign('groupList', build_select('row[group_id]', \app\admin\model\UserGroup::column('id,name'), 0, ['class' => 'form-control selectpicker']));
+        $this->view->assign('paycodeList', build_select('row[extend][pay_code]', Config::get('pt_pay_codes'), 0, ['class' => 'form-control selectpicker']));
+        return $this->view->fetch();
     }
 
 }

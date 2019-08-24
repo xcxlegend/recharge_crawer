@@ -10,6 +10,10 @@ class User extends Validate
      * 验证规则
      */
     protected $rule = [
+        'username' => 'require|max:50|unique:admin',
+        'nickname' => 'require',
+        'password' => 'require',
+        'email'    => 'require|email|unique:admin,email',
     ];
     /**
      * 提示消息
@@ -20,8 +24,19 @@ class User extends Validate
      * 验证场景
      */
     protected $scene = [
-        'add'  => [],
-        'edit' => [],
+        'add'  => ['username', 'email', 'nickname', 'password'],
+        'edit' => ['username', 'email', 'nickname'],
     ];
+
+    public function __construct(array $rules = [], $message = [], $field = [])
+    {
+        $this->field = [
+            'username' => __('Username'),
+            'nickname' => __('Nickname'),
+            'password' => __('Password'),
+            'email'    => __('Email'),
+        ];
+        parent::__construct($rules, $message, $field);
+    }
     
 }
