@@ -26,3 +26,28 @@
         </div>
     </div>
 </div>
+<script id="searchtpl" type="text/html">
+    <form action="" class="form-commonsearch">
+        <div style="border-radius:2px;margin-bottom:10px;background:#f5f5f5;padding:15px 20px;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3" style="min-height:68px;">
+                    <div class="form-group">
+                        <label class="control-label">用户分组</label>
+                        <div>
+                                <input type="hidden" class="operate" data-name="group_id" value="in"/>
+                        <select class="form-control selectpicker" multiple name="group_id" >
+                                
+                            {foreach name="groupList" item="vo"}
+                            <option value="{$key}">{$vo}</option>
+                            {/foreach}
+                        </select>
+                        <input type="submit" class="btn btn-success btn-block" value="提交" style="width:68px;"/>
+                        <input type="reset" class="btn btn-primary btn-block" value="重置" style="width:68px;"/>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </form>
+</script>
