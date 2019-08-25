@@ -11,11 +11,34 @@ use Sabre\Xml\Reader;
 use Sabre\Xml\Service;
 use think\Log;
 
+/**
+ * Class CSTPay
+ * @package app\common\library\pay
+ */
 class CSTPay extends IPay
 {
+    /**
+     *
+     */
     const API_QUERYACCOUNT = '/MainServiceBusiness/GetAgentInfo';
+    /**
+     *
+     */
     const API_PHONE_ORDER = '/MainServiceBusiness/SendPhoneChargeInfo';
+    /**
+     *
+     */
     const XML_KEY_PREFIX = '{http://schemas.datacontract.org/2004/07/KR.NetDistribute.Models}';
+
+    /**
+     *
+     */
+    const GATEWAY = 'http://www.18381789999.com:8107';
+
+    static protected $api_xml_ns = [
+        self::API_PHONE_ORDER => 'SendChargeInfoReturn',
+        self::API_QUERYACCOUNT => 'AgentInfoReturn',
+    ];
 
 
     /**
@@ -70,11 +93,11 @@ class CSTPay extends IPay
             'chargenumbertype' => 1,
             'agentid'          => $this->params->agentid,
             'returntype'       => 2,
-            'orderid'          => 'orderid',
-            'chargenumber'     => 'chargenumber',
-            'amountmoney'      => 'amountmoney',
+            'orderid'          => $order['orderid'],
+            'chargenumber'     => $order['phone'],
+            'amountmoney'      => $order['money'],
             'num'              => 1,
-            'ispname'          => 'ispname',
+            'ispname'          => '',
             'source'           => 2,
         ];
 
@@ -93,27 +116,38 @@ class CSTPay extends IPay
             $md5str .= "{$sign_param}={$params[$sign_param]}&";
         }
 
-        $md5str .= 'merchantKey='.$this->params['merchantKey'];
+        $md5str .= 'merchantKey='.$this->params->merchantKey;
         $params['verifystring'] = md5($md5str);
 
         $response = $this->request(self::API_PHONE_ORDER, $params);
-        /*if ($response[]) {
+        if (($response['resultno'] ?? '-1') != '0000') {
+            return false;
+        }
 
-        }*/
-        return false;
-
+        $order['trade_id'] = $response['orderno'];
+        return true;
     }
 
+    /**
+     * @return string
+     */
     public function notifyError()
     {
         return 'F';
     }
 
+    /**
+     *
+     */
     public function queryOrder()
     {
         // TODO: Implement queryOrder() method.
     }
 
+    /**
+     * @param $request
+     * @return array|null
+     */
     public function checkNotify($request): ?array
     {
         /**
@@ -124,18 +158,28 @@ class CSTPay extends IPay
          * agentid=%s&orderno=%s&orderstatus=%s&merchantKey=%s
          */
 
-        $sign = md5("agentid={$this->params->agentid}&orderno={$request['orderno']}&orderstatus={$request['orderstatus']}&merchantKey={$this->params->merchantKey}");
-        if ($sign !== $request['verifystring']){
+        $orderno = $request['orderno'] ?? '';
+        $orderstatus = $request['orderstatus'] ?? '';
+        $verifystring = $request['verifystring'] ?? '';
+
+        $sign = md5("agentid={$this->params->agentid}&orderno={$orderno}&orderstatus={$orderstatus}&merchantKey={$this->params->merchantKey}");
+        if ($sign !== $verifystring){
             return null;
         }
-        return [$request['orderno']];
+        return [$request['orderno'] ?? ''];
     }
 
+    /**
+     * @return string
+     */
     public function notifySucess()
     {
         return 'T';
     }
 
+    /**
+     * @return array|null
+     */
     public function queryAccount()
     {
 
@@ -159,16 +203,32 @@ class CSTPay extends IPay
     }
 
 
-    // 因为是get请求. 所以直接请求
+    /**
+     * @param $api
+     * @param array $query
+     * @return array|null
+     * @throws \Sabre\Xml\ParseException
+     */
     protected function request($api, array $query): ?array {
         $client = New Client();
-        $url = $this->params->gateway . $api . '?' .  http_build_query($query);
-        $res = $client->get($url);
+//        $url = $this->params->gateway . $api . '?' .  http_build_query($query);
+        $url = self::GATEWAY . $api . '?' .  http_build_query($query);
+//        echo $url;
+        try{
+            $res = $client->get($url);
+        } catch (\Exception $e){
+            Log::error(json_encode([
+                'url'       => $url,
+                'response'  => '',
+                'exception' => $e->getMessage()
+            ], JSON_UNESCAPED_UNICODE));
+            return null;
+        }
         if ($res->getStatusCode() == 200){
             $xml = $res->getBody()->getContents();
             $reader = new Service();
             $reader->elementMap = [
-                '{http://schemas.datacontract.org/2004/07/KR.NetDistribute.Models}AgentInfoReturn' => 'Sabre\Xml\Deserializer\keyValue',
+                '{http://schemas.datacontract.org/2004/07/KR.NetDistribute.Models}' . self::$api_xml_ns[$api] => 'Sabre\Xml\Deserializer\keyValue',
             ];
             $result = $reader->parse($xml);
             foreach ($result as $key => $item) {
@@ -176,14 +236,13 @@ class CSTPay extends IPay
                 $result[$newKey] = $item;
                 unset($result[$key]);
             }
-            dump($result);
-            Log::record(json_encode([
+            Log::alert(json_encode([
                 'url'       => $url,
                 'response'  => $xml,
             ], JSON_UNESCAPED_UNICODE));
             return (array)$result;
         } else {
-            Log::record(json_encode([
+            Log::error(json_encode([
                 'url'       => $url,
                 'code'      => $res->getStatusCode(),
             ], JSON_UNESCAPED_UNICODE));

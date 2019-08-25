@@ -18,6 +18,9 @@ class Pay extends Api
     protected $noNeedLogin = ['*'];
     protected $noNeedRight = ['*'];
 
+    protected $account;
+    protected $Pay;
+
     /**
      * 商户回调接口.
      *
@@ -32,32 +35,38 @@ class Pay extends Api
             orderstatus
             verifystring
          */
-        $method = $this->request->param('method');
+        $method = $this->request->param('method', 'CST');
         $AccountModel = model('Account');
         if (!$AccountModel){
-            exit('error');
+            echo 'error';
+            $this->notifyFinish();
         }
         $account = $AccountModel->where(['number' => $this->request->request('agentid')])->find();
         if (!$account) {
-            exit('no agent');
+            echo 'no agent';
+            $this->notifyFinish();
         }
+        $this->account = $account;
         $Pay = Factory::create($method, new InitParam($account));
         if (!$Pay) {
-            exit('error');
+            echo 'error';
+            $this->notifyFinish();
         }
+
+        $this->Pay = $Pay;
 
         $ret = $Pay->checkNotify($this->request->request());
 
         if (!$ret) {
             echo $Pay->notifyError();
-            exit();
+            $this->notifyFinish();
         }
         [$orderid] = $ret;
         $model = model('Order');
         $order = $model->where(['orderid' => $orderid])->find();
         if (!$order) {
             echo $Pay->notifyError();
-            exit;
+            $this->notifyFinish();
         }
         $order = $order->toArray();
         switch ($order['status']) {
@@ -71,7 +80,19 @@ class Pay extends Api
             default:
                 echo $Pay->notifyError();
         }
-        exit;
+        $this->notifyFinish();
+    }
+
+
+    protected function notifyFinish() {
+        if ($this->account && $this->Pay) {
+            $account = $this->Pay->queryAccount();
+            $agentbalance = $account['agentbalance'] ?? -1;
+            if ($agentbalance >= 0) {
+                model('Account')->where(['id' => $this->account['id']])->setField('money', $agentbalance);
+            }
+        }
+        exit();
     }
 
 }

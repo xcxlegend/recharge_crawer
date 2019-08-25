@@ -23,12 +23,13 @@ class PayOrder
      * @param $data
      */
     public function fire(Job $job, $data) {
+        ['order' => $order, 'pay_code' => $payCode] = $data;
         // $data -> order
         // 如果支付失败
         if (!$this->pay($data)) {
             if ($job->attempts() >= 1) {
                 $job->delete();
-                $this->notify($data, Order::STATUS_TIMEOUT);
+                $this->notify($order, Order::STATUS_TIMEOUT);
                 return;
             } else {
                 $job->release(60);
@@ -45,22 +46,19 @@ class PayOrder
      * @param $order
      * @return bool
      */
-    protected function pay($order): bool{
-
+    protected function pay($data): bool{
+        ['order' => $order, 'pay_code' => $payCode] = $data;
         // 从库中选择一个账号
         $account = model('Account', 'common\model')->findValidAccount($order['money']);
         if ($account == null) { return false;}
 
-        $Pay = Factory::create('Test', new InitParam($account));
+        $Pay = Factory::create($payCode, new InitParam($account));
         if (!$Pay) {
             return false;
         }
 
         if ($Pay->order($order)){
             $order['pay_uid'] = $account['id'];
-//            $order['pay_time'] = time();
-//            $order['status'] = Order::STATUS_PAYING;
-//            model('Order', 'common\model')->where(['id' => $order['id']])->update($order);
             model('Order', 'common\model')->setOrderPaying($order);
             return true;
         }

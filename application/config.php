@@ -278,8 +278,8 @@ return [
     ],
 
     'pt_pay_codes' => [
-        'CST',
-        'Test'
+        'CST' => 'CST',
+        'Test'=> 'Test'
     ],
 
 ];

@@ -115,8 +115,13 @@ class Order extends BaseApi
             return $this->error("订单保存失败", null, self::ERROR_ORDER_SAVE);
         }
         $order['id'] = $orderModel->getLastInsID();
+
         // 将订单推到queue里面等待处理
-        Queue::push('app\common\job\PayOrder', $order, 'PayOrder');
+
+        $userExtend = json_decode($user['extend'], true);
+        $payCode = $userExtend['pay_code'] ?? 'Test';
+
+        Queue::push('app\common\job\PayOrder', ['order' => $order, 'pay_code' => $payCode], 'PayOrder');
         return $this->success("请求成功", [
             'orderid'       => $order['orderid'],
             'out_trade_id'  => $order['out_trade_id'],
