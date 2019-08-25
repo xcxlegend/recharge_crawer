@@ -32,10 +32,10 @@ class InitParam
      * @param $agentid
      * @param $merchantKey
      */
-    public function __construct($gateway, $agentid, $merchantKey)
+    public function __construct($account)
     {
-        $this->gateway = $gateway;
-        $this->agentid = $agentid;
-        $this->merchantKey = $merchantKey;
+        $this->gateway = '';
+        $this->agentid = $account['number'];
+        $this->merchantKey = $account['appkey'];
     }
 }

@@ -19,9 +19,12 @@ class TestPay extends IPay
     {
         $trade_id = create_orderid('T');
         $order['trade_id'] = $trade_id;
-
-
         return true;
+    }
+
+    public function notifyError()
+    {
+        return 'F';
     }
 
     public function queryOrder()
@@ -29,14 +32,14 @@ class TestPay extends IPay
         // TODO: Implement queryOrder() method.
     }
 
-    public function checkNotify()
+    public function checkNotify($request): ?array
     {
-        // TODO: Implement checkNotify() method.
+        return [$request['orderno']];
     }
 
     public function notifySucess()
     {
-        // TODO: Implement notifySucess() method.
+        return 'T';
     }
 
     public function queryAccount()

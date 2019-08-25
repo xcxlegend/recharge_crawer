@@ -14,9 +14,11 @@ use think\Queue;
  */
 class Order extends BaseApi
 {
-
     /**
      * 下游请求订单接口
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
     public function index() {
         // TODO 下游请求订单接口
@@ -44,6 +46,7 @@ class Order extends BaseApi
             !$this->request->request("out_trade_id") ||
             !$this->request->request("phone") ||
             !$this->request->request("money") ||
+            !$this->request->request("notify_url") ||
             !$this->request->request("sign")
         )
             {
@@ -63,6 +66,7 @@ class Order extends BaseApi
             'out_trade_id'  => $this->request->request('out_trade_id'),
             'phone'         => $this->request->request('phone'),
             'money'         => $this->request->request('money'),
+            'notify_url'    => $this->request->request('notify_url'),
         ];
         $key = json_decode($user['extend'], true)['appkey'] ?? '';
         if (sign($key, $signs) !== $this->request->request('sign')){
@@ -105,6 +109,7 @@ class Order extends BaseApi
             'success_time'   => 0,
             'finish_time'    => 0,
             'status'         => 0,
+            'notify_url'     => $this->request->request('notify_url'),
         ];
         if (!$orderModel->insert($order)) {
             return $this->error("订单保存失败", null, self::ERROR_ORDER_SAVE);

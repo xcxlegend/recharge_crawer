@@ -7,6 +7,7 @@ namespace app\common\job;
 use app\common\library\pay\Factory;
 use app\common\library\pay\InitParam;
 use app\common\model\Order;
+use think\Queue;
 use think\queue\Job;
 
 /**
@@ -22,12 +23,12 @@ class PayOrder
      * @param $data
      */
     public function fire(Job $job, $data) {
+        // $data -> order
         // 如果支付失败
         if (!$this->pay($data)) {
-            if ($job->attempts() == 1) {
+            if ($job->attempts() >= 1) {
                 $job->delete();
-                // DELETE ORDER
-                // NOTIFY TIMEOUT
+                $this->notify($data, Order::STATUS_TIMEOUT);
                 return;
             } else {
                 $job->release(60);
@@ -49,13 +50,25 @@ class PayOrder
         // 从库中选择一个账号
         $account = model('Account', 'common\model')->findValidAccount($order['money']);
         if ($account == null) { return false;}
-        if (Factory::create('Test', new InitParam('', $account['number'], $account['appkey']))->order($order)){
-            $order['pay_time'] = time();
-            $order['status'] = Order::STATUS_PAYING;
-            model('Order', 'common\model')->where(['id' => $order['id']])->update($order);
+
+        $Pay = Factory::create('Test', new InitParam($account));
+        if (!$Pay) {
+            return false;
+        }
+
+        if ($Pay->order($order)){
+            $order['pay_uid'] = $account['id'];
+//            $order['pay_time'] = time();
+//            $order['status'] = Order::STATUS_PAYING;
+//            model('Order', 'common\model')->where(['id' => $order['id']])->update($order);
+            model('Order', 'common\model')->setOrderPaying($order);
             return true;
         }
         return false;
+    }
+
+    protected function notify($order, $status) {
+        Order::pubNotify($order, $status);
     }
 
 }

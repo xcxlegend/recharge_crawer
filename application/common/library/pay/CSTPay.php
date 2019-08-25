@@ -104,19 +104,36 @@ class CSTPay extends IPay
 
     }
 
+    public function notifyError()
+    {
+        return 'F';
+    }
+
     public function queryOrder()
     {
         // TODO: Implement queryOrder() method.
     }
 
-    public function checkNotify()
+    public function checkNotify($request): ?array
     {
-        // TODO: Implement checkNotify() method.
+        /**
+         *  agentid
+            orderno
+            orderstatus
+            verifystring
+         * agentid=%s&orderno=%s&orderstatus=%s&merchantKey=%s
+         */
+
+        $sign = md5("agentid={$this->params->agentid}&orderno={$request['orderno']}&orderstatus={$request['orderstatus']}&merchantKey={$this->params->merchantKey}");
+        if ($sign !== $request['verifystring']){
+            return null;
+        }
+        return [$request['orderno']];
     }
 
     public function notifySucess()
     {
-        // TODO: Implement notifySucess() method.
+        return 'T';
     }
 
     public function queryAccount()
