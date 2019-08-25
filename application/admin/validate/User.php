@@ -10,10 +10,10 @@ class User extends Validate
      * 验证规则
      */
     protected $rule = [
-        'username' => 'require|max:50|unique:admin',
+        'username' => 'require|max:50|unique:user,username',
         'nickname' => 'require',
         'password' => 'require',
-        'email'    => 'require|email|unique:admin,email',
+        'email'    => 'require|email|unique:user,email',
     ];
     /**
      * 提示消息

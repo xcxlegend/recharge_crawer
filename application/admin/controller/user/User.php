@@ -91,8 +91,8 @@ class User extends Backend
                 $params['extend'] = json_encode($extend);
                 $userValidate = \think\Loader::validate('User');
                 $userValidate->rule([
-                    'username' => 'require|max:50|unique:admin,username,' . $row->id,
-                    'email'    => 'require|email|unique:admin,email,' . $row->id
+                    'username' => 'require|max:50|unique:user,username,' . $row->id,
+                    'email'    => 'require|email|unique:user,email,' . $row->id
                 ]);
                 $result = $row->validate('User.edit')->save($params);
                 if ($result === false)
