@@ -37,7 +37,7 @@ class Demo extends Frontend
 //        return $this->success('ok', '', $data);
         $data['sign'] = sign($key, $data);
         $client = new Client();
-        $res = $client->post('http://crawer.in:8003/api/order', ['query' => $data])
+        $res = $client->post(config("site.domain") . '/api/order', ['query' => $data])
             ->getBody()->getContents();
 //        dump($res);
         $this->success('成功','', $res);
