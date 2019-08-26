@@ -2,6 +2,8 @@
 
 
 namespace app\common\model;
+use app\common\library\pay\Factory;
+use app\common\library\pay\InitParam;
 use think\Db;
 use think\Model;
 
@@ -9,6 +11,15 @@ class Account extends Model
 {
 
 
+    /**
+     * @param $money
+     * @return array|null
+     * @throws \think\Exception
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     * @throws \think\exception\PDOException
+     */
     public function findValidAccount($money): ?array {
         $query = ['money' => ['>=', $money]];
         $count = $this->where($query)->count();
@@ -39,6 +50,29 @@ class Account extends Model
         $this->commit();
 
         return $account->toArray();
+    }
+
+
+    /**
+     * 刷新余额
+     * @param $id
+     * @return string
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public function refresh($id): string {
+        $account = $this->find($id);
+        if (!$account) {
+            return "平台账号错误";
+        }
+        $Pay = Factory::create('CST', new InitParam($account));
+        $data = $Pay->queryAccount();
+        $agentbalance = $data['agentbalance'] ?? -1;
+        if ($agentbalance >= 0) {
+            $this->where(['id' => $id])->setField('money', $agentbalance);
+        }
+        return true;
     }
 
 
