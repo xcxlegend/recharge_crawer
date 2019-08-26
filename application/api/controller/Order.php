@@ -118,7 +118,7 @@ class Order extends BaseApi
 
         // 将订单推到queue里面等待处理
 
-        $userExtend = json_decode($user['extend'], true);
+        $userExtend = json_decode($user['extend'] ?? '', true);
         $payCode = $userExtend['pay_code'] ?? 'Test';
 
         Queue::push('app\common\job\PayOrder', ['order' => $order, 'pay_code' => $payCode], 'PayOrder');
