@@ -227,7 +227,7 @@ class Api
         Log::record(json_encode([
             'request' => $this->request->request(),
             'response' => $msg,
-        ], JSON_UNESCAPED_UNICODE), 'WARN');
+        ], JSON_UNESCAPED_UNICODE), 'alert');
         throw new HttpResponseException($response);
     }
 
