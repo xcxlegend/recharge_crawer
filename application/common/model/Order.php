@@ -1,7 +1,8 @@
 <?php
 
-
 namespace app\common\model;
+use app\common\library\pay\Factory;
+use app\common\library\pay\InitParam;
 use think\Model;
 use think\Queue;
 
@@ -55,6 +56,11 @@ class Order Extends Model
         $this->where(['id' => $order['id']])->setField($update);
     }
 
+    /**
+     * 补回调
+     * @param $order
+     * @param $status
+     */
     static public function pubNotify($order, $status) {
         $query = [
             'out_trade_id' => $order['out_trade_id'],
@@ -72,6 +78,39 @@ class Order Extends Model
             'callback'  => $callback,
         ];
         Queue::push('app\common\job\Notify', $notify, 'notify');
+    }
+
+
+    /**
+     * 查单
+     * @param $order
+     * @return string  包含错误信息 如果成功则为空
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    static public function queryOrder(&$order): string {
+
+        $pay_uid = $order['pay_uid'];
+        $account = model('Account')->find($pay_uid);
+        if (!$account) {
+            return '平台账号错误';
+        }
+        $user = model('user')->find($order['uid']);
+        if (!$user) {
+            return '下游账号错误';
+        }
+        $userExtend = json_decode($user['extend'] ?? '', true);
+        $code = $userExtend['pay_code'] ?? 'CST';
+
+        $Pay = Factory::create($code, new InitParam($account));
+        if ($Pay->queryOrder($order)) {
+            model('order')->setOrderPayed($order);
+            self::pubNotify($order, 1);
+            return "";
+        }else {
+            return '订单未支付';
+        }
     }
 
 

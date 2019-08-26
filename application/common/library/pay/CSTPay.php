@@ -25,6 +25,9 @@ class CSTPay extends IPay
      *
      */
     const API_PHONE_ORDER = '/MainServiceBusiness/SendPhoneChargeInfo';
+
+    const API_QUERY_ORDER = '/MainServiceBusiness/GetOrderInfo';
+
     /**
      *
      */
@@ -38,6 +41,7 @@ class CSTPay extends IPay
     static protected $api_xml_ns = [
         self::API_PHONE_ORDER => 'SendChargeInfoReturn',
         self::API_QUERYACCOUNT => 'AgentInfoReturn',
+        self::API_QUERY_ORDER => 'GetOrderInfoReturn',
     ];
 
 
@@ -139,9 +143,29 @@ class CSTPay extends IPay
     /**
      *
      */
-    public function queryOrder()
+    public function queryOrder(array &$order): bool
     {
-        // TODO: Implement queryOrder() method.
+        /**
+         *
+        agentid	代理商id
+        returntype	返回类型
+        orderid	代理商订单号
+        verifystring	验证摘要串
+        // agentid=%s&returntype=%s&orderid=%s&merchantKey=%s
+         */
+        $orderid = $order['orderid'];
+
+        $data = [
+            'agentid'       => $this->params->agentid,
+            'returntype'    => 2,
+            'orderid'       => $orderid,
+        ];
+        $data['verifystring'] = md5("agentid={$this->params->agentid}&returntype=2&orderid={$orderid}&merchantKey={$this->params->merchantKey}");
+        $response = $this->request(self::API_QUERY_ORDER, $data);
+        if (($response['resultno'] ?? '-1') != '0014') {
+            return false;
+        }
+        return true;
     }
 
     /**

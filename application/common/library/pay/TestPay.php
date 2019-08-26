@@ -27,7 +27,7 @@ class TestPay extends IPay
         return 'F';
     }
 
-    public function queryOrder()
+    public function queryOrder(array &$order): bool
     {
         // TODO: Implement queryOrder() method.
     }

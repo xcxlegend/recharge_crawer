@@ -3,6 +3,8 @@
 namespace app\api\controller;
 
 use app\common\controller\Api;
+use app\common\library\pay\Factory;
+use app\common\library\pay\InitParam;
 
 /**
  * 示例接口
@@ -15,9 +17,9 @@ class Demo extends Api
     //如果接口已经设置无需登录,那也就无需鉴权了
     //
     // 无需登录的接口,*表示全部
-    protected $noNeedLogin = ['test', 'test1'];
+    protected $noNeedLogin = ['*'];
     // 无需鉴权的接口,*表示全部
-    protected $noNeedRight = ['test2'];
+    protected $noNeedRight = ['*'];
 
     /**
      * 测试方法
@@ -68,6 +70,16 @@ class Demo extends Api
     public function test3()
     {
         $this->success('返回成功', ['action' => 'test3']);
+    }
+
+    public function query() {
+
+        $account = model('account')->find(1);
+        $Pay = Factory::create('CST', new InitParam($account));
+        $order = model('order')->find(39)->toArray();
+        $res= $Pay->queryOrder($order);
+        dump($res);
+
     }
 
 }

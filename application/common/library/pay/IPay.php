@@ -17,7 +17,7 @@ abstract class IPay
      * @return bool
      */
     abstract public function order(array &$order): bool;       // 订单
-    abstract public function queryOrder();  // 订单查询
+    abstract public function queryOrder(array &$order): bool;  // 订单查询
     abstract public function checkNotify($request): ?array; // 接受回调参数检查
     abstract public function notifySucess(); // 回调成功的回复
     abstract public function notifyError(); // 回调成功的回复
