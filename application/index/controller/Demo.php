@@ -26,7 +26,7 @@ class Demo extends Frontend
             "out_trade_id"  => create_orderid('P'),
             "phone"         => $phone,
             "money"         => 1,
-            'notify_url'    => 'http://crawer.in:8003/index/demo/notify',
+            'notify_url'    => config("site.domain") . '/index/demo/notify',
         ];
 
         $user = model('user')->where(['username' => 'admin'])->find();
