@@ -101,5 +101,30 @@ class Account extends Backend
         }
         return $this->view->fetch();
     }
+    //刷新余额
+    public function refresh()
+    {
+
+        $id = $this->request->post("id");
+        $ids = explode( ',',$id);
+        if ($ids)
+        {
+            $commonModel = model('Common/Account');
+            $commonModel->startTrans();
+            foreach ($ids as $value)
+            {
+                $result = $commonModel->refresh($value);
+                if ($result === false)
+                {
+                    $this->rollback();
+                    $this->error($commonModel->getError());
+                    break; 
+                }
+            }
+            $commonModel->commit();
+            $this->success();
+        }
+        $this->error();
+    }
 
 }
