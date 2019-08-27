@@ -89,7 +89,7 @@ class Order Extends Model
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException
      */
-    static public function queryOrder(&$order): string {
+    public function queryOrder(array &$order): string {
 
         $pay_uid = $order['pay_uid'];
         $account = model('Account')->find($pay_uid);
@@ -105,7 +105,7 @@ class Order Extends Model
 
         $Pay = Factory::create($code, new InitParam($account));
         if ($Pay->queryOrder($order)) {
-            model('order')->setOrderPayed($order);
+            $this->setOrderPayed($order);
             self::pubNotify($order, 1);
             return "";
         }else {

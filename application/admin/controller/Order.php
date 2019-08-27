@@ -48,6 +48,7 @@ class Order extends Backend
         }
         $order = $this->model->find($id);
         if($order['status']==1){
+            $order = $order->toArray();
             model('Common/Order')->queryOrder($order);
             $this->success();
         }else{
