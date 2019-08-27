@@ -49,8 +49,8 @@ class Order extends Backend
         $order = $this->model->find($id);
         if($order['status']==1){
             $order = $order->toArray();
-            model('Common/Order')->queryOrder($order);
-            $this->success();
+            $result = model('Common/Order')->queryOrder($order);
+            $this->success($result);
         }else{
             $this->error('订单错误');
         }  
