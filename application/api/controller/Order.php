@@ -133,7 +133,43 @@ class Order extends BaseApi
      * 下游查询订单接口
      */
     public function query() {
+        if(
+            !$this->request->request("username") ||
+            !$this->request->request("out_trade_id") ||
+            !$this->request->request("sign")
+        )
+        {
+            return $this->error("参数错误", null, self::ERROR_PARAMS);
+        }
 
+        $username = $this->request->request('username');
+        $user = model('User')->where(['username' => $username])->find();
+
+        if (!$user) {
+            return $this->error("用户不存在", null, self::ERROR_NOUSER);
+        }
+
+        // 签名
+        $signs = [
+            'username'      => $this->request->request('username'),
+            'out_trade_id'  => $this->request->request('out_trade_id'),
+        ];
+        $key = json_decode($user['extend'], true)['appkey'] ?? '';
+        if (sign($key, $signs) !== $this->request->request('sign')){
+            return $this->error("签名错误", null, self::ERROR_SIGN);
+        }
+
+        $order = model('order')->where(['out_trade_id' => $this->request->request('out_trade_id')])->find();
+        if (!$order) {
+            $this->error("订单不存在", null, self::ERROR_NO_ORDER);
+        }
+        $this->success("查询成功", [
+            'orderid' => $order['orderid'],
+            'out_trade_id' => $order['out_trade_id'],
+            'phone' => $order['phone'],
+            'money' => $order['money'],
+            'status' => $order['status'],
+        ]);
     }
 
 }
