@@ -42,7 +42,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                                 click: function (data,row,index) {
                                     Layer.confirm("确定刷新余额吗？", {type: 5, skin: 'layui-layer-dialog layui-layer-fast'}, function (value,index) {
                                         Fast.api.ajax({
-                                            url: "account/resetmoney",
+                                            url: "account/refresh",
                                             data: { id: row.id}
                                         }, function (data) {
                                             Layer.closeAll();
@@ -61,9 +61,11 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             Table.api.bindevent(table);
 
             $(document).on("click","#btn-resetmoney", function (e) {
+                var ids = Table.api.selectedids(table);
                 Layer.confirm("确定刷新余额吗？", {type: 5, skin: 'layui-layer-dialog layui-layer-fast'}, function (value,index) {
                     Fast.api.ajax({
-                        url: "account/resetmoney"
+                        url: "account/refresh",
+                        data: { id:ids.join(",")}
                     }, function (data) {
                         Layer.closeAll();
                     });

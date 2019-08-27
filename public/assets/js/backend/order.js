@@ -28,12 +28,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                 },
                 columns: [
                     [
-                        {field: 'id',width: "60px", title: __('Id'), sortable: true},
+                        {field: 'id',width: "60px", title: __('Id'), sortable: true,operate: false},
                         {field: 'uid', width: "90px",title: '商户ID',sortable: true},
                         {field: 'pay_uid', width: "120px",title: '上游账号ID',sortable: true},
-                        {field: 'orderid', width: "150px",title: '平台订单号'},
-                        {field: 'trade_id',width: "150px", title: '上游订单号'},
+                        {field: 'orderid', width: "150px",title: '平台订单号'},       
                         {field: 'out_trade_id',width: "150px", title: '下游订单号'},
+                        {field: 'trade_id',width: "150px", title: '上游订单号'},
                         {field: 'phone', width: "100px",title: '手机号', operate: false},
                         {field: 'money', title: '金额', operate: false},
                         {
@@ -41,7 +41,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                             title: '订单状态', 
                             sortable: true,
                             formatter: Controller.api.formatter.status,
-                            searchList: [{"id":"0","name":"未完成"},{"id":"1","name":"订单支付中"},{"id":"2","name":"支付成功"},{"id":"3","name":"回调完成"}],
+                            searchList: [{"id":"-1","name":"超时订单"},{"id":"0","name":"未完成"},{"id":"1","name":"订单支付中"},{"id":"2","name":"支付成功"},{"id":"3","name":"回调完成"}],
                         },
                         {
                             field: 'create_time',
@@ -66,19 +66,24 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                                 {
                                     name: 'click',
                                     title: __('查单'),
-                                    classname: 'btn btn-xs btn-info btn-click',
+                                    classname: 'btn btn-xs btn-info btn-click ',
                                     icon: 'fa fa-arrow-circle-o-up',
                                     click: function (data,row,index) {
-                                        Layer.confirm("确定手动查单吗？", {type: 5, skin: 'layui-layer-dialog layui-layer-fast'}, function (value,index) {
+                                        if(row.status!=1){
+                                            Layer.alert("支付中订单才可查单！");
+                                            return;
+                                        }
+                                        Layer.confirm("确定查单吗？", {type: 5, skin: 'layui-layer-dialog layui-layer-fast'}, function (value,index) {
                                             Fast.api.ajax({
-                                                url: "order/find",
+                                                url: "order/queryOrder",
                                                 data: { id: row.id}
                                             }, function (data) {
                                                 Layer.closeAll();
                                                 
                                             });
                                         });
-                                    }
+                                    },
+                                    formatter: Controller.api.formatter.url
                                 },
                                 {
                                     name: 'click',
@@ -86,9 +91,13 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                                     classname: 'btn btn-xs btn-info btn-click',
                                     icon: 'fa fa-anchor',
                                     click: function (data,row,index) {
+                                        if(row.status!=1){
+                                            Layer.alert("支付成功的订单才可手动回调！");
+                                            return;
+                                        }
                                         Layer.confirm("确定回调吗？", {type: 5, skin: 'layui-layer-dialog layui-layer-fast'}, function (value,index) {
                                             Fast.api.ajax({
-                                                url: "order/callback",
+                                                url: "order/doNotify",
                                                 data: { id: row.id}
                                             }, function (data) {
                                                 Layer.closeAll();
@@ -115,10 +124,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form', 'template'], function
                     return '<div class="input-group input-group-sm" style="width:250px;"><input type="text" class="form-control input-sm" value="' + value + '"><span class="input-group-btn input-group-sm"><a href="' + value + '" target="_blank" class="btn btn-default btn-sm"><i class="fa fa-link"></i></a></span></div>';
                 },
                 status: function (value, row, index) {
-                    var statusjson = {"0":"未完成","1":"订单支付中","2":"支付成功","3":"回调完成"};
+                    var statusjson = {"-1":"超时订单","0":"未完成","1":"订单支付中","2":"支付成功","3":"回调完成"};
                     return statusjson[value];
                 },
-                
             },
         }
     };
