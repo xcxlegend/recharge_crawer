@@ -18,6 +18,8 @@ class BaseApi extends Api
     const ERROR_ORDER_EXIST   = "-6";
     const ERROR_MONEY   = "-7";
     const ERROR_ORDER_SAVE   = "-8";
+    const ERROR_NO_ORDER    = "-9";
+    const ERROR_ORDER_NOPAY = "-10";
 
 
 
