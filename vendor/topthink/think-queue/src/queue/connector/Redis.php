@@ -145,7 +145,7 @@ class Redis extends Connector
         $jobs = $this->getExpiredJobs(
             $from, $time = time()
         );
-        if (count($jobs) > 0) {
+        if ( is_array($jobs) && count($jobs) > 0) {
             $this->transaction(function () use ($from, $to, $time, $jobs, $attempt) {
                 $this->removeExpiredJobs($from, $time);
                 $this->pushExpiredJobsOntoNewQueue($to, $jobs, $attempt);
@@ -210,6 +210,7 @@ class Redis extends Connector
                 $job      = $this->setMeta($job, 'attempts', $attempts + 1);
             }
         }
+        $jobs = $jobs ?? [];
         call_user_func_array([$this->redis, 'rPush'], array_merge([$to], $jobs));
     }
 
