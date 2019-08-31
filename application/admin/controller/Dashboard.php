@@ -19,35 +19,18 @@ class Dashboard extends Backend
      */
     public function index()
     {
-        $seventtime = \fast\Date::unixtime('day', -7);
-        $paylist = $createlist = [];
-        for ($i = 0; $i < 7; $i++)
-        {
-            $day = date("Y-m-d", $seventtime + ($i * 86400));
-            $createlist[$day] = mt_rand(20, 200);
-            $paylist[$day] = mt_rand(1, mt_rand(1, $createlist[$day]));
-        }
-        $hooks = config('addons.hooks');
-        $uploadmode = isset($hooks['upload_config_init']) && $hooks['upload_config_init'] ? implode(',', $hooks['upload_config_init']) : 'local';
-        $addonComposerCfg = ROOT_PATH . '/vendor/karsonzhang/fastadmin-addons/composer.json';
-        Config::parse($addonComposerCfg, "json", "composer");
-        $config = Config::get("composer");
-        $addonVersion = isset($config['version']) ? $config['version'] : __('Unknown');
+        $userModel = model('User');
+        $orderModel = model('Order');
+
         $this->view->assign([
-            'totaluser'        => 35200,
-            'totalviews'       => 219390,
-            'totalorder'       => 32143,
-            'totalorderamount' => 174800,
-            'todayuserlogin'   => 321,
-            'todayusersignup'  => 430,
-            'todayorder'       => 2324,
-            'unsettleorder'    => 132,
-            'sevendnu'         => '80%',
-            'sevendau'         => '32%',
-            'paylist'          => $paylist,
-            'createlist'       => $createlist,
-            'addonversion'       => $addonVersion,
-            'uploadmode'       => $uploadmode
+            'totaluser'        => $userModel->where(['group_id'=>1])->count(),
+            'totalorder'       => $orderModel->count(),
+            'totalusermoney'   => $userModel->sum('money'),
+            'totalorderamount' => $orderModel->sum('money'),
+            'totalorder0'   => $orderModel->where(['status'=>0])->count(),
+            'totalorder1'  => $orderModel->where(['status'=>1])->count(),
+            'totalorder2'       => $orderModel->where(['status'=>2])->count(),
+            'totalorder3'    => $orderModel->where(['status'=>3])->count(),
         ]);
 
         return $this->view->fetch();
