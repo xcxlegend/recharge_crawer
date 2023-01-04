@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76728d2409f1805cc9e13dafaff4660d",
+    "content-hash": "d249700e34e75ac9cea70f6b519bcffb",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -1719,16 +1719,16 @@
         },
         {
             "name": "topthink/framework",
-            "version": "v5.0.24",
+            "version": "v5.0.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/framework.git",
-                "reference": "c255c22b2f5fa30f320ecf6c1d29f7740eb3e8be"
+                "reference": "643c58ed1bd22a2823ce5e95b3b68a5075f9087c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/framework/zipball/c255c22b2f5fa30f320ecf6c1d29f7740eb3e8be",
-                "reference": "c255c22b2f5fa30f320ecf6c1d29f7740eb3e8be",
+                "url": "https://api.github.com/repos/top-think/framework/zipball/643c58ed1bd22a2823ce5e95b3b68a5075f9087c",
+                "reference": "643c58ed1bd22a2823ce5e95b3b68a5075f9087c",
                 "shasum": ""
             },
             "require": {
@@ -1766,7 +1766,11 @@
                 "orm",
                 "thinkphp"
             ],
-            "time": "2019-01-11T08:04:58+00:00"
+            "support": {
+                "issues": "https://github.com/top-think/framework/issues",
+                "source": "https://github.com/top-think/framework/tree/v5.0.25"
+            },
+            "time": "2022-10-25T14:59:38+00:00"
         },
         {
             "name": "topthink/think-captcha",
@@ -1846,23 +1850,23 @@
         },
         {
             "name": "topthink/think-installer",
-            "version": "v1.0.12",
+            "version": "v1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/think-installer.git",
-                "reference": "1be326e68f63de4e95977ed50f46ae75f017556d"
+                "reference": "eae1740ac264a55c06134b6685dfb9f837d004d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-installer/zipball/1be326e68f63de4e95977ed50f46ae75f017556d",
-                "reference": "1be326e68f63de4e95977ed50f46ae75f017556d",
+                "url": "https://api.github.com/repos/top-think/think-installer/zipball/eae1740ac264a55c06134b6685dfb9f837d004d1",
+                "reference": "eae1740ac264a55c06134b6685dfb9f837d004d1",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0||^2.0"
             },
             "require-dev": {
-                "composer/composer": "1.0.*@dev"
+                "composer/composer": "^1.0||^2.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -1883,7 +1887,11 @@
                     "email": "448901948@qq.com"
                 }
             ],
-            "time": "2017-05-27T06:58:09+00:00"
+            "support": {
+                "issues": "https://github.com/top-think/think-installer/issues",
+                "source": "https://github.com/top-think/think-installer/tree/v1.0.14"
+            },
+            "time": "2021-03-25T08:34:02+00:00"
         },
         {
             "name": "topthink/think-queue",
@@ -1938,7 +1946,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.0"
+        "php": ">=7.1"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
 }
